@@ -1,0 +1,42 @@
+/**
+  Animation Settings
+  ---------------------------------------------------------------------- */
+// The default transition
+$transition: all 350ms ease;
+
+.animate-on-enter,
+.animate-on-leave {
+  opacity: 0;
+  top: 4rem;
+  transition: all 600ms ease-in-out;
+
+  &.is-visible {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/**
+  Parallax Animation
+  ---------------------------------------------------------------------- */
+.animate-parallax {
+  top: 0;
+  left: auto;
+  right: auto;
+}
+
+// Controls the "normal" setting for parallax intensity
+$parallaxBasis: 8rem;
+
+$parallaxDeck: (
+  subtle: #{$parallaxBasis / 2},
+  normal: $parallaxBasis,
+  extreme: #{$parallaxBasis * 2},
+  whoa: #{$parallaxBasis * 4}
+);
+
+@each $depth, $parallax in $parallaxDeck {
+  .module-bg.animate-z-#{$depth} {
+    height: calc(100% + #{$parallax});
+  }
+}
