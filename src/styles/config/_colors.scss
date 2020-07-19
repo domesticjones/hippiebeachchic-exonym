@@ -1,6 +1,8 @@
 $white: #fff;
+$white-trans: transparentize($white, 0.4);
 $grey: #ccc;
 $black: #000;
+$black-trans: transparentize($black, 0.4);
 $red: #f00;
 $blue: #00f;
 $trans: transparentize($black, 1);

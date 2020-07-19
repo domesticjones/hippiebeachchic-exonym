@@ -4,16 +4,43 @@
 html,
 body {
   max-width: 100%;
-  min-height: 400vh;
+  min-height: 100vh;
   font-size: $font-size;
 }
 
 body {
-  color: $black;
+  color: $white;
+  background-color: $black;
   line-height: 1;
   font-family: $font-default;
   font-weight: $font-normal;
   font-smoothing: antialiased;
+}
+
+#container {
+  position: relative;
+  z-index: 1;
+
+  article {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+.page-background {
+  position: fixed;
+  z-index: 0;
+  width: calc(100vw + 2rem);
+  height: calc(100vh + 2rem);
+  top: -1rem;
+  left: -1rem;
+  background-size: cover;
+  background-position: bottom center;
+  @include filter-blur(0.5rem);
+
+  img {
+    display: none;
+  }
 }
 
 /**
@@ -23,8 +50,8 @@ a {
   text-decoration: none;
 }
 
-@include linkColor($blue, static);
-@include linkColor($red, hover);
+@include linkColor($white-trans, static);
+@include linkColor($white-trans, hover);
 
 /**
   Wordpress Image Alignment Spacing

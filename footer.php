@@ -19,6 +19,14 @@
 				</div>
 			</footer>
 		</div>
-		<?php wp_footer(); ?>
+		<?php
+			$pageBg = get_field('background_image', 'options');
+			if($pageBg) {
+				$pageBgImg = wp_get_attachment_image($pageBg['id'], 'jumbo');
+				$pageBgUrl = wp_get_attachment_image_url($pageBg['id'], 'jumbo');
+				echo '<div class="page-background" style="background-image: url(' . $pageBgUrl . ')">' . $pageBgImg . '</div>';
+			}
+			wp_footer();
+		?>
 	</body>
 </html>

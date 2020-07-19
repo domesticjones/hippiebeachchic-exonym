@@ -3,6 +3,46 @@
     "title": "Exonym - Mission Control",
     "fields": [
         {
+            "key": "field_5f06778acd662",
+            "label": "Background Image",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f067797cd663",
+            "label": "Background Image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5d92d2258e793",
             "label": "Migration Management",
             "name": "",
@@ -86,9 +126,7 @@
                         "307": "307 (Temporarily Moved)",
                         "404": "404 (Not Found)"
                     },
-                    "default_value": [
-                        301
-                    ],
+                    "default_value": 301,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -189,5 +227,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1572493238
+    "modified": 1594259373
 }

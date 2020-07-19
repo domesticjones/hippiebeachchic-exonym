@@ -68,14 +68,21 @@ if (!defined('WPINC')) { die; }
     }
   }
 
-  function ex_content($id = false) {
-    if(!$id) { $id = $post->ID; }
-    if(have_rows('content_builder', $id)) {
-      while(have_rows('content_builder', $id)) {
-        the_row();
-        ex_wrap('start-modules');
-          echo '<p>asdf</p><blockquote><q>Quote Goes Here</q><cite>Person Name</cite></blockquote>';
-        ex_wrap('end');
-      }
-    }
+  function ex_modal($id, $content) {
+    $output = '<div id="modal-' . $id . '" class="modal-container">';
+      $output .= '<div class="modal-close">close</div>';
+      $output .= '<div class="modal-content">';
+        $output .= $content;
+      $output .= '</div>';
+    $output .= '</div>';
+    return $output;
+  }
+
+  function ex_modal_images($a, $b, $price, $id, $avail) {
+    $aPhoto = wp_get_attachment_image($a['id'], 'thumbnail-large');
+    $bPhoto = wp_get_attachment_image($b['id'], 'thumbnail-large');
+    $availShow = $avail ? 'Unavailable' : 'For Sale';
+    $infoBlob = '<div class="modal-image-info"><span class="price">' . $price . '</span><span class="id">&#35;' . $id . '</span><span class="avail">' . $availShow . '</span></div>';
+    $output = '<div class="modal-images">' . $aPhoto . $bPhoto . $infoBlob . '</div>';
+    return $output;
   }

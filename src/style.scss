@@ -19,7 +19,6 @@
 @import 'styles/config/typography';
 @import 'styles/config/animation';
 @import 'styles/config/forms';
-//@import 'styles/config/tables';
 @import 'styles/config/xxx';
 
 /**
@@ -32,4 +31,5 @@
 /**
   Modules
   ---------------------------------------------------------------------- */
-@import 'styles/modules/settings';
+@import 'styles/modules/modals';
+@import 'styles/modules/layout-grid';

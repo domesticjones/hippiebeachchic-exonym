@@ -1,0 +1,33 @@
+.layout-grid {
+  @include listStripped();
+  @include grid(center, center, row, wrap);
+
+  li {
+    position: relative;
+    width: calc(25% - 1rem);
+    margin: 0.5rem;
+    padding-top: 25%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0.25rem;
+    cursor: hand;
+    cursor: pointer;
+
+    @include responsive(tablet) {
+      width: calc(33.333% - 1rem);
+      padding-top: 33.333%;
+    }
+  }
+}
+
+.layout-grid-id {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: $black-trans;
+  padding: 1rem 2rem;
+  line-height: 1;
+  margin: 0;
+  transform: translateX(-50%);
+  border-radius: 1rem 1rem 0 0;
+}

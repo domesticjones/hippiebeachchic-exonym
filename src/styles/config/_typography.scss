@@ -1,17 +1,15 @@
 /**
   Font Families & Settings
   ---------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,500;1,300;1,500&display=swap');
 
-$font-default: 'Lato', sans-serif;
-$font-heading: 'Lato', sans-serif;
+$font-default: 'Barlow', sans-serif;
+$font-heading: 'Barlow', sans-serif;
 
-$font-size: 16px;
+$font-size: 13px;
 
-$font-light: 300;
-$font-normal: 400;
-$font-bold: 700;
-$font-ultra-bold: 900;
+$font-normal: 300;
+$font-bold: 500;
 
 $font-italic: italic;
 
