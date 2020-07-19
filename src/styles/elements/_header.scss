@@ -11,4 +11,8 @@
     width: auto;
     margin: 0 auto;
   }
+
+  @include responsive(tablet) {
+    padding: 6vw 6vw 3vw 6vw;
+  }
 }

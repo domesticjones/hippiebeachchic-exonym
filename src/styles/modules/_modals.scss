@@ -19,6 +19,10 @@
   img {
     display: block;
   }
+
+  @include responsive(phablet) {
+    padding: 1rem;
+  }
 }
 
 .modal-close {
@@ -32,16 +36,21 @@
   background-color: $black;
   line-height: 1;
   border-radius: 0 0 0 1rem;
+  box-shadow: 0 0 1rem transparentize($black, 0.75);
   cursor: hand;
   cursor: pointer;
 
   @include pseudo(after, inline-block) {
     content: '';
-    width: 1em;
-    height: 1em;
+    width: 1.25em;
+    height: 1.25em;
     margin-left: 0.5em;
     background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNC4yLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDM4NCAzODQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4NCAzODQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoJLnN0MHtmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxnPg0KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzY4LDE3NmMtOC44LDAtMTYsNy4yLTE2LDE2YzAsODguMi03MS44LDE2MC0xNjAsMTYwUzMyLDI4MC4yLDMyLDE5MlMxMDMuOCwzMiwxOTIsMzINCgkJCWM0MywwLDgzLjMsMTYuOCwxMTMuNSw0Ny4zYzYuMiw2LjMsMTYuNCw2LjMsMjIuNiwwLjFjNi4zLTYuMiw2LjMtMTYuNCwwLjEtMjIuNkMyOTEuOSwyMC4xLDI0My41LDAsMTkyLDBDODYuMSwwLDAsODYuMSwwLDE5Mg0KCQkJczg2LjEsMTkyLDE5MiwxOTJjMTA1LjksMCwxOTItODYuMSwxOTItMTkyQzM4NCwxODMuMiwzNzYuOCwxNzYsMzY4LDE3NnoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIxNC42LDE5MmwzNi43LTM2LjdjNi4yLTYuMiw2LjItMTYuNCwwLTIyLjZzLTE2LjQtNi4yLTIyLjYsMEwxOTIsMTY5LjRsLTM2LjctMzYuNw0KCQkJYy02LjItNi4yLTE2LjQtNi4yLTIyLjYsMGMtNi4yLDYuMi02LjIsMTYuNCwwLDIyLjZsMzYuNywzNi43bC0zNi43LDM2LjdjLTYuMiw2LjItNi4yLDE2LjQsMCwyMi42YzMuMSwzLjEsNy4yLDQuNywxMS4zLDQuNw0KCQkJczguMi0xLjYsMTEuMy00LjdsMzYuNy0zNi43bDM2LjcsMzYuN2MzLjEsMy4xLDcuMiw0LjcsMTEuMyw0LjdzOC4yLTEuNiwxMS4zLTQuN2M2LjItNi4yLDYuMi0xNi40LDAtMjIuNkwyMTQuNiwxOTJ6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
     background-size: contain;
+  }
+
+  @include responsive(phablet) {
+    padding: 1rem;
   }
 }
 
@@ -54,6 +63,7 @@
     max-width: calc(50% - 2rem);
     margin: 1rem;
     border-radius: 0.25rem;
+    box-shadow: 0 0 1rem transparentize($black, 0.75);
 
     @include responsive(tablet) {
       max-width: calc(100% - 2rem);
@@ -75,11 +85,12 @@
   padding: 1.5rem 2rem;
   border-radius: 2rem;
   font-size: 1.5rem;
-  @include fontBold();
+  box-shadow: 0 0 1rem transparentize($black, 0.75);
 
   span {
     line-height: 1;
-    padding: 0.15em;
+    padding: 0.15rem;
+    text-transform: lowercase;
   }
 
   .price,
@@ -89,6 +100,7 @@
 
   .id {
     font-size: 2em;
+    @include fontBold();
   }
 
   @include responsive(tablet) {
