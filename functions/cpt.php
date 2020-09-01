@@ -114,7 +114,9 @@ function ex_masks_column($column, $post_id) {
 }
 
 function ex_edit_form_after_title() {
-  $adminPost = $_GET['post'] ? $_GET['post'] : '<small style="font-size: 0.25em; vertical-align: middle">Save to generate ID</small>';
-  echo '<h2 style="margin: 0; padding: 0; font-size: 3em; font-weight: 700;">Mask ID: ' . $adminPost . '</h2>';
+  if(get_post_type($_GET['post']) == 'masks' || $_GET['post_type'] == 'masks') {
+    $adminPost = $_GET['post'] ? $_GET['post'] : '<small style="font-size: 0.25em; vertical-align: middle">Save to generate ID</small>';
+    echo '<h2 style="margin: 0; padding: 0; font-size: 3em; font-weight: 700;">Mask ID: ' . $adminPost . '</h2>';
+  }
 }
 add_action('edit_form_after_title', 'ex_edit_form_after_title');

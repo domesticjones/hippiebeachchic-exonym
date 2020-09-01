@@ -1,0 +1,11 @@
+#module-pageContent {
+  max-width: 768px;
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: $black-trans;
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
